@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Style/home.css';
 
-import img from '../assets/233.avif';
+import HomeImg from '../assets/233.avif';
 import aboutImage from '../assets/6513f3fa13.jpeg';
 import aboutImage2 from '../assets/65112028b082e8d7caffaa1c_About201.jpeg';
 import aboutImage3 from '../assets/008.avif';
@@ -40,6 +40,7 @@ const Home = () => {
           </div>
 
           <div className="home__content-image">
+            <img src={HomeImg} alt="home__Image" className='home__img' />
           </div>
         </div>
         {/* Home Content End */}
