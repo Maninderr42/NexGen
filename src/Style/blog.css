@@ -1,0 +1,85 @@
+.blog h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .blog_intro {
+    margin-left: 10px;
+  }
+  
+  .blog_main_content {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 490px;
+    margin: 10px;
+  }
+  
+  .blog_post {
+    height: 500px;
+    width: 490px;
+    position: relative;
+  }
+  
+  .blog_tags {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .author {
+    position: relative;
+    left: 270px;
+  }
+  
+  p {
+    margin-bottom: 0px;
+  }
+  
+  .blog_description {
+    margin: 5px;
+    height: 115px;
+    justify-content: center;
+  }
+  
+  .blog_cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  
+  .blog_image {
+    border-radius: 5px;
+    width: 500px;
+    height: 350px;
+  }
+  
+  .image_container {
+    position: relative;
+  }
+  
+  .explore_button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .blog_post:hover .explore_button {
+    opacity: 1;
+  }
+  
+  .explore_button:hover {
+    background-color: #0056b3;
+  }
+  
