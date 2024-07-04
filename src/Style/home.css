@@ -28,8 +28,9 @@
 }
 .home__content-title{
   font-size: 1.2rem;
-  font-weight: 250;
-  color: #454444;
+  font-weight: 350;
+  line-height: 1.3;
+  font-family: var(--font-content);
   text-align: justify;
 }
 .home__img{
@@ -124,8 +125,8 @@ text-align: center;
 }
 .about__subtitle{
   font-size: 1.2rem;
-  font-weight: 300;
-  color: #454444;
+  font-family: var(--font-content);
+  font-weight: 350;
 }
 .home-dataImg{
   display: flex;
