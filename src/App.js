@@ -5,6 +5,7 @@ import Home from './Components/Home'
 
 import Header from './Components/Header';
 import Blog from './Components/Blog';
+import Careers from './Components/Careers';
 
 
 
@@ -15,6 +16,9 @@ function App() {
     <Routes>
     <Route path='/' element={<Home />}/>
     <Route path='/blog' element={<Blog />}/>
+    <Route path='/careers' element={<Careers />}/>
+
+
 
 
     </Routes>
