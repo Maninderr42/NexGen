@@ -59,7 +59,7 @@
   margin-top: 2rem;
 }
 .home__Contactbutton{
-  background-color: #378ae9 !important;
+  background-color: var(--primary-color) ;
   color: #fff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
@@ -71,6 +71,14 @@
   padding: 10px 20px 10px 20px;
   border-radius: 10px;
 
+}
+.home__Contactbutton:hover{
+  color: white;
+  background-color: #4cb050;
+}
+.home__Readbutton:hover{
+  background-color: var(--primary-color) ;
+color: white;
 }
 
 .home__about-title{
@@ -96,7 +104,7 @@ text-align: center;
   object-fit: cover;
 }
 .home__aboutbutton{
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--black-button);
   border-radius:30px;
   margin-top: 1rem;
   font-size: 20px;
@@ -235,8 +243,12 @@ font-weight: 600;
 .home__grom-data h4{
 font-size: 1.3rem;
 margin-top: 0.50rem;
+cursor: pointer;
 font-weight: 600;
 color: #378ae9;
+}
+.home__grom-data h4:hover{
+  text-decoration: underline;
 }
 .gromImage{
 border-radius: 10px;
@@ -267,7 +279,7 @@ line-height: 1.1;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-gap: 1.5rem;
+gap: 2rem;
 }
 
 .card {
@@ -314,8 +326,10 @@ background-color: var(--overlay-background);
 border-radius: 20px;
 }
 
+
 .card__title {
 position: relative;
+font-size: 30px;
 width: fit-content;
 width: -moz-fit-content; /* Prefijo necesario para Firefox  */
 }
@@ -352,8 +366,18 @@ color: var(--black);
 }
 
 .card__button:focus {
-outline: 2px solid black;
+/* outline: 2px solid black; */
 outline-offset: -5px;
+}
+.card__button:hover{
+  text-decoration: underline;
+  animation:forwards 2s infinite;
+}
+
+@keyframes upDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
 @media (any-hover: hover) and (any-pointer: fine) {
@@ -422,9 +446,198 @@ outline-offset: -5px;
 }
 
 
-    
+.Home__hireBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  background-color: #edeff7; /* Update as needed */
+  padding: 40px 0; /* Adjust padding as necessary */
+}
+
+.home__hire-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url(../assets/Shape\ 1.svg);
+  background-position:-200px;
+  background-repeat: no-repeat;
+
+  
+  background-size: 900px 650px;
+  text-align: center;
+}
+
+.home__hire-content h1 {
+  width: 500px;
+
+font-family: var(--font-title);
+  margin-top: 3rem;
+  font-size: 34px; /* Adjust font size as necessary */
+  color: #2a2828; /* Update text color as needed */
+  margin-bottom: 20px; /* Space between text and button */
+}
+.shapearrowImage{
+  transform: rotate(185deg);
+  margin-right: 5rem;
+  position: relative;
+  top: -50px;
+  margin-left: 3rem;
+}
 
 
+.button-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.dots-container {
+  gap: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Space between dots and button */
+}
+
+.dot {
+  
+  background: linear-gradient(45deg, #f5903d, #fb8f37);
+
+  width: 8px;
+border-radius: 5px;
+  height: 40px; /* Adjust height as needed */
+  margin: 5px 0; /* Space between dots */
+}
+
+.hire-button {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: #fff; /* Button text color */
+  padding: 10px 60px; /* Adjust button padding */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px; /* Adjust border radius */
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  font-size: 16px; /* Adjust font size */
+}
+
+.hire-button:hover {
+  background-color: #e68900; /* Adjust hover background color */
+
+
+}
+
+.upperCentre{
+  position: relative;
+  top: -10px;
+}
+.bottomCentre{
+  position: relative;
+  top: 10px;
+}
+.upperLeft, 
+.bottomRight{
+  transform: rotate(-40deg); /* Change the angle here */
+}
+.upperRight,
+.bottomLeft{
+  transform: rotate(45deg); /* Change the angle here */
+
+}
+
+
+.Home__whyChooseBlock {
+  display: flex;
+  flex-direction: row;  
+  margin-top: 8rem;
+  border: 2px solid rgb(39, 38, 38);
+}
+
+.home__chooseBlock1-content {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.chooseblock1-data1, .chooseblock1-data2, .chooseblock3-subpart1, .chooseblock3-subpart2 {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.chooseblock1-data1,
+.chooseblock3-subpart1 {
+  background-color: #315450;
+  color: white;
+}
+
+.chooseblock1-data2 {
+  background-color: #f3f3f2;
+}
+
+.home__chooseBlock2-content {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__choosegirlImage {
+  width: 100%;
+  height: auto;
+}
+
+.home__chooseBlock3-content {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+
+.chooseblock3-data1 h1{
+  text-align: end;
+  text-transform: uppercase;
+font-size: 4.5rem;
+margin: 2rem 3rem 0rem 5rem;
+}
+.chooseblock3-data1 h3{
+font-size: 1.2rem;
+font-weight: 400;
+text-align: end;
+color: #666;
+margin-left: 8rem;
+margin-right: 3rem;
+}
+.fontWeight{
+  /* text-align: end; */
+  font-weight: 200;
+  }
+.chooseblock3-data2 {
+  display: flex;
+}
+
+.chooseblock3-subpart1 {
+  flex: 1;
+  padding: 1rem;
+}
+
+.chooseblock3-subpart2 {
+  background-color: #000000;
+  flex: 1;
+  color: white;
+  padding: 1rem;
+}
+
+.chooseIcon {
+  width: 40px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
 
 
 

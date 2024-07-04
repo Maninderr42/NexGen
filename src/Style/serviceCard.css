@@ -1,0 +1,34 @@
+.ServiceButton{
+    width: fit-content;
+    margin-left: 6rem;
+    padding: 6px 20px 6px 20px;
+    border-radius: 45px;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    border: none;
+    background-color: var(--black-button);
+}
+.ServiceButton:hover{
+    background-color: var(--black-button);
+
+}
+.serviceCard__title{
+    font-family: var(--font-title);
+    margin-bottom: 2rem;
+    margin-left: 6rem;
+}
+.linesImage{
+    position: relative;
+    left: -10px;
+    top: -100px;
+}
+.serviceCardContact{
+    margin-top: 4rem;
+}
+.service__contact-data h1{
+    margin-left: 10rem;
+}
+.service-Imagetext h4{
+    text-align: left;
+    font-size: 28px;
+}

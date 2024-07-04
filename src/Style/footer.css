@@ -1,0 +1,97 @@
+
+.Footer__content{
+display: flex;
+flex-direction: row;
+padding: 5rem;
+    background-color: #333333;
+    color:rgba(233, 228, 228, 0.5);
+}
+.logo{
+    width: 40px;
+    border-radius: 20%;
+}
+.Footer__company{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.Footer_company-logo{
+    display: flex;
+    flex-direction: row;
+
+}
+.Footer_company-logo p{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.Footer__company p{
+     width: 300px;
+}
+.Footer__hypeLink{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 25px;
+}
+.footer__social-icon{
+    color: white;
+}
+.Footer__Pages{
+    margin-left: 5rem;
+    align-items: center;
+}
+.footer__item{
+    margin-top: 0.50rem;
+}
+.Footer__Pages h3{
+    font-weight: 400;
+    font-family: var(--font-title);
+    font-size: 20px;
+    color: white;
+    margin-bottom: 3rem;
+}
+.footer__link{
+    font-size: 15px;
+    font-family: var(--font-content);
+    color:rgba(233, 228, 228, 0.5);
+    margin-right: 3rem;
+}
+.footer__link:hover{
+    color: var(--primary-color)
+
+}
+.Footer__contactUs{
+    margin-left: 5rem;
+}
+.Footer__contactUs h3{
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 3rem;
+}
+.contactList{
+    margin-bottom: 1rem;
+}
+.Footer__subscribe{
+    margin-left: 5rem;
+}
+.Footer__subscribe h3{
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 3rem;
+}
+.footer__terms{
+    bottom: 0;
+    display: flex;
+    border-top: 1px solid white;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
+    padding-top: 1rem;
+    color:rgba(233, 228, 228, 0.5);
+}
+.footer__terms h5{
+    font-size: 15px;
+    
+}
