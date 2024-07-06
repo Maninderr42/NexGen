@@ -1,5 +1,6 @@
 
 .Footer__content{
+    width: 100%;
 display: flex;
 flex-direction: row;
 padding: 5rem;
@@ -13,6 +14,7 @@ padding: 5rem;
 .Footer__company{
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 2rem;
 }
 .Footer_company-logo{
@@ -22,7 +24,6 @@ padding: 5rem;
 }
 .Footer_company-logo p{
     font-size: 1.2rem;
-    margin-left: 1rem;
 }
 .Footer__company p{
      width: 300px;
@@ -37,8 +38,8 @@ padding: 5rem;
     color: white;
 }
 .Footer__Pages{
-    margin-left: 5rem;
     align-items: center;
+    width: 100%;
 }
 .footer__item{
     margin-top: 0.50rem;
@@ -54,14 +55,14 @@ padding: 5rem;
     font-size: 15px;
     font-family: var(--font-content);
     color:rgba(233, 228, 228, 0.5);
-    margin-right: 3rem;
 }
 .footer__link:hover{
     color: var(--primary-color)
 
 }
 .Footer__contactUs{
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
+    width: 100%;
 }
 .Footer__contactUs h3{
     font-weight: 400;
@@ -73,7 +74,7 @@ padding: 5rem;
     margin-bottom: 1rem;
 }
 .Footer__subscribe{
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
 }
 .Footer__subscribe h3{
     font-weight: 400;
@@ -94,4 +95,24 @@ padding: 5rem;
 .footer__terms h5{
     font-size: 15px;
     
+}
+@media screen and (max-width: 992px) {
+ 
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .Footer__content{
+        display: flex;
+        flex-direction: column;
+        
+        }
+}
+
+@media screen and (max-width: 576px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  
 }

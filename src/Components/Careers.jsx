@@ -47,15 +47,15 @@ const Careers = () => {
   ];
 
   return (
-    <div className="careers_page">
+    <div className="careers_page container">
       <div className="careers_content">
-        <h1>Let's Grow Together.</h1>
+        <h1>Let's Grow Together</h1>
         <p>
           We're building a culture at NexGen where amazing people (like you) can
           do their best work. If you're ready to grow your career and help
           millions of organizations grow better, you've come to the right place.
         </p>
-        <button className="careers_button">Contact us</button>
+        <button className="careers_button button button--flex">Contact us</button>
       </div>
 
       <img src={img1} className="careers_img" alt="Careers" />
@@ -88,7 +88,7 @@ const Careers = () => {
           some of the most talented people in the industry, go on annual picnics
           outside the country, and enjoy many other benefits by working with us.
         </p>
-        <button className="career_button">learn more</button>
+        <button className="career_button">Learn more</button>
       </div>
     </div>
   );

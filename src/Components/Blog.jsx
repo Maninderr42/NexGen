@@ -1,43 +1,36 @@
 import React from "react";
 import BlogCard from "./BlogCard";
+import Image1 from "../assets/651bd575b7970eb877551cc9_Blog1.jpg";
+import Image2 from "../assets/651bd5f92699bcc1af1edb58_Blog Thumb 7.jpg";
+import Image3 from '../assets/651bd451aaca2da0c42e1f72_Blog2.jpg';
 import "../Style/blog.css";
-import Image1 from "../assets/software-developers52993.avif";
-import Image3 from '../assets/human-7688.avif';
-import Image2 from '../assets/server-cloud-341.avif';
-
-
-
-
 
 const Blog = () => {
   const blogPosts = [
     {
       image: Image1,
-      tags: ["software development"],
-      author: "Author One",
-      description: "Explore software development with Nexgen Innovations. From startups to enterprises, we deliver user-focused design and agile development. Discover our scalable e-commerce platforms and healthcare management systems powered by Python and React."
+      tags: ["Software development"],
+      description: "Key tips and tricks for the Software Development"
     },
     {
       image: Image2,
       tags: ["cloud solutions"],
-      author: "Author Two",
-      description: "Explore our cloud solutions that offer scalable, secure, and cost-effective options for your business. Learn about our success stories and how we leverage AWS and Azure for optimal performance."
+      description: "Unlocking Business Agility with Cloud Solutions"
     },
     {
       image: Image3,
-      tags: ["AI and data analytics"],
-      author: "Author Three",
-      description: "Discover the power of AI and data analytics with Nexgen Innovations. We provide insights on leveraging machine learning algorithms and big data to drive business decisions and innovations."
+      tags: ["AI and Data analytics"],
+      description: "Data analytics and AI: Essential for business success and daily life transformation"
     }
   ];
 
   return (
-    <div className="blog">
+    <section className="blog-container">
       <h1>Welcome to the NexGen Innovations Blog!</h1>
-      <p className="blog_intro">
+      <p className="blog-intro">
         Welcome to the Nexgen Innovations Blog! Here, we share industry insights, company news, expert tips, and comprehensive tutorials to keep you informed and inspired in the ever-evolving world of technology.
       </p>
-      <div className="blog_cards">
+      <div className="blog-cards">
         {blogPosts.map((post, index) => (
           <BlogCard 
             key={index}
@@ -48,7 +41,7 @@ const Blog = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

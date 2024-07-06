@@ -1,0 +1,174 @@
+.contact__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact__title h1{
+    margin-top: 4rem;
+    text-align: center;
+
+}
+.contact__boxes{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 2rem;
+    gap: 2rem;
+
+}
+.box-data {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    border-radius: 40px;
+    background-color: rgb(230, 239, 244);
+
+    
+}
+.box-data h3{
+text-transform: uppercase;
+font-weight: 200;
+margin-bottom: 2rem;
+}
+.box-data h4{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0.50rem;
+    color: var(--primary-color);
+}
+.box__company-info{
+    margin-top: 0.50rem;
+    font-size: 20px;
+    color: black;
+}
+.box__icon{
+    font-size: 60px;
+    background-image: linear-gradient(to right top, #ffffff, #dfdef9, #b7bff3, #86a3ee, #378ae9);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 50%;
+    position: relative;
+    top: -40px;
+
+}
+.contactUs__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.contactUs__title h4{
+margin-top: 4rem;
+    font-size: 25px;
+
+
+}
+.contactUs__title h2{
+    margin-top: 1rem;
+    font-size: 40px;
+    width: 300px;
+}
+.contactUs__title p{
+    margin-top: 1rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+}
+.contactUs-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    /* gap: 1.5rem; */
+}
+.contactUs-input-data{
+    padding: 0.75rem;
+    font-size: 15px;
+    background-color: #ecf2f8;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    min-width: 800px;
+}
+
+.contactUs-form input:focus,
+.contactUs-form textarea:focus,
+.contactUs-form select:focus {
+    outline: none; /* Remove the default focus outline */
+    border: 1px solid var(--primary-color);
+}
+.contactUsButton{
+    background-color: var(--primary-color);
+    width: max-content;
+    padding: 10px 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+
+}
+.contactUsButton:hover{
+    background-color: black;
+    color: white;
+}
+
+.error{
+    font-size: 15px;
+    color: red;
+    position: relative;
+    top: -20px;
+    left: 15px;
+  }
+  
+  .successMessage{
+    font-size: 18px;
+    color: green;
+    left: 15px;
+
+  }
+/* Responsive CSS */
+@media screen and (max-width: 992px) {
+    .contact__boxes {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium devices */
+    }
+
+    .contactUs__title h2 {
+        width: auto; /* Adjust width for smaller screens */
+    }
+
+    .contactUs-input-data {
+        min-width: 600px; /* Adjust minimum width for smaller devices */
+    }
+    .box__icon{
+        font-size: 50px;
+        padding: 1.5rem 2.5rem;
+        top: -40px;
+    
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact__boxes {
+        grid-template-columns: 1fr; /* One column on small tablets */
+    }
+
+    .contactUs-input-data {
+        min-width: 400px; /* Further adjust minimum width for smaller tablets */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contactUs__title h2 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    .contactUs-input-data {
+        min-width: 150px; /* Further adjust minimum width for mobile screens */
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .contactUs__title h2 {
+        font-size: 25px; /* Further adjust font size for very small screens */
+    }
+}

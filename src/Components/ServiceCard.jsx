@@ -50,9 +50,8 @@ Recognizing that technology never sleeps, our dedicated support team is availabl
             <div className="card__content--container flow">
               <h2 className="card__title">Artificial Intelligence</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
-              <Link to="/service/ai" className="card__button">Details</Link>
+              <Link to="/service/ai" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
           </div>
         </article>
@@ -62,9 +61,8 @@ Recognizing that technology never sleeps, our dedicated support team is availabl
             <div className="card__content--container flow">
               <h2 className="card__title">Cloud Solutions</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
-              <Link to="/service/cloud" className="card__button">Details</Link>
+              <Link to="/service/cloud" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
           </div>
         </article>
@@ -74,9 +72,8 @@ Recognizing that technology never sleeps, our dedicated support team is availabl
             <div className="card__content--container flow">
               <h2 className="card__title">Cyber Security</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
-              <Link to="/service/cyber" className="card__button">Details</Link>
+              <Link to="/service/cyber" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
           </div>
         </article>
@@ -86,9 +83,8 @@ Recognizing that technology never sleeps, our dedicated support team is availabl
             <div className="card__content--container flow">
               <h2 className="card__title">Software Development</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
-              <Link to="/service/software" className="card__button">Details</Link>
+              <Link to="/service/software" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
           </div>
         </article>
@@ -98,9 +94,8 @@ Recognizing that technology never sleeps, our dedicated support team is availabl
             <div className="card__content--container flow">
               <h2 className="card__title">Data Analytics</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
-              <Link to="/service/analytics" className="card__button">Details</Link>
+              <Link to="/service/analytics" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
           </div>
         </article>
@@ -110,9 +105,8 @@ Recognizing that technology never sleeps, our dedicated support team is availabl
             <div className="card__content--container flow">
               <h2 className="card__title">Database Security</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
-              <Link to="/service/dbSecurity" className="card__button">Details</Link>
+              <Link to="/service/dbSecurity" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
           </div>
         </article>

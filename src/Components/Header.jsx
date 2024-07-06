@@ -1,39 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Style/header.css';
 import brand from '../assets/117.png';
-import connectImage from '../assets/pikaso_texttoimage_35mm-film-photography-A-young-woman-with-long-wavy (1).jpeg'
+import ConsultForm from './ConsultForm'; // Import the new ConsultForm component
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
-  const popupRef = useRef(null);
 
-  const togglePopup = () => {
+  const togglePopup = (e) => {
+    e.preventDefault(); // Prevent the default action
     setIsPopupVisible(!isPopupVisible);
   };
 
   const toggleMenu = () => {
     setToggle(!toggle);
   };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (popupRef.current && !popupRef.current.contains(event.target)) {
-        setIsPopupVisible(false);
-      }
-    };
-
-    if (isPopupVisible) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isPopupVisible]);
 
   return (
     <header className='header'>
@@ -70,7 +52,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav__item">
-              <Link to="/ContactUs" className='nav__link'>
+              <Link to="/Contact" className='nav__link'>
                 <i className="uil uil-estate nav__icon"></i>Contact Us
               </Link>
             </li>
@@ -94,30 +76,7 @@ const Header = () => {
         </div>
       </nav>
 
-      {isPopupVisible && (
-        <div className={`overlay ${isPopupVisible ? 'active' : ''}`}>
-          <div className="popup" ref={popupRef}>
-            <div className="consult__content">
-
-            <img src={connectImage} alt="" className='connectImage' />
-
-              <form className='conult__form'>
-              <i onClick={togglePopup} class="uil uil-multiply"></i>
-
-                <h4>Connect with Us</h4>
-                <p>Searching for a job? Visit our <Link to="/careers" className='goCareersPage'> Careers</Link></p>
-                <input type="text" name="name" placeholder='Full Name' className='consult__input-data' required/>
-                <input type="number" name="number" placeholder='Mobile with country code'className='consult__input-data'required />
-                <input type="text" name="email" placeholder='Email Address'className='consult__input-data'required />
-                <textarea name="introduction" placeholder='Brief requirements' className='BriefField consult__input-data' required></textarea> 
-                <button className='button button--flex consultbutton'>Submit</button>
-              </form>
-
-
-            </div>
-          </div>
-        </div>
-      )}
+      <ConsultForm isPopupVisible={isPopupVisible} togglePopup={togglePopup} /> {/* Use the new component */}
     </header>
   );
 }

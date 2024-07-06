@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Style/home.css';
 
 import HomeImg from '../assets/233.avif';
 import aboutImage from '../assets/6513f3fa13.jpeg';
 import aboutImage2 from '../assets/65112028b082e8d7caffaa1c_About201.jpeg';
 import aboutImage3 from '../assets/008.avif';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import gromImage1 from '../assets/creative-3367.jpg';
 import gromImage2 from '../assets/software-developers52993.avif';
 import gromImage3 from '../assets/server-cloud-341.avif';
@@ -24,12 +24,45 @@ import bulbImage from '../assets/Bulb.png';
 import clock from '../assets/clock_86093.png'
 import settingImage from '../assets/setting.png'
 import calendarImage from '../assets/calendar.png'
+import ConsultForm from './ConsultForm'; // Import the new ConsultForm component
+
 
 
 
 
 
 const Home = () => {
+  const navigate = useNavigate();
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupVisible(!isPopupVisible);
+  };
+
+
+
+
+
+  const handleButtonClick = (event) => {
+    const buttonId = event.target.id;
+    switch (buttonId) {
+      case 'button1':
+        navigate("/consultForm");
+
+        break;
+      case 'button2':
+        document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
+
+        break;
+      case 'button3':
+        navigate("/careers");
+        break;
+
+      default:
+        console.log('Unknown button clicked');
+    }
+  };
+
   return (
     <section className='home home__section'>
       <div className='home__container container'>
@@ -44,8 +77,10 @@ const Home = () => {
             Our mission is to ensure you never miss an opportunity to connect with your customers and grow your business.</p>
 
             <div className="home__button-data">
-              <button className='btn btn-primary button button--flex home__Contactbutton'>Contact us</button>
-              <button className='btn btn-outline-primary button button--flex home__Readbutton'>Read More</button>
+            <button id='button1' onClick={togglePopup} className='btn btn-primary button button--flex home__Contactbutton'>Contact us</button>
+            <button id='button2' onClick={handleButtonClick} className='btn btn-outline-primary button button--flex home__Readbutton'>Read More</button>
+            <ConsultForm isPopupVisible={isPopupVisible} togglePopup={togglePopup} /> {/* Use the new component */}
+
             </div>
           </div>
 
@@ -56,7 +91,7 @@ const Home = () => {
         {/* Home Content End */}
 
         {/* About Section */}
-        <section className="home__about">
+        <section id="about-section" className="home__about">
           <h1 className='home__about-title'>About us </h1>
           <div className='home__content-about'>
             <div className='home__content-aboutImage'>
@@ -168,7 +203,6 @@ const Home = () => {
             <div className="card__content--container flow">
               <h2 className="card__title">Artificial Intelligence</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
               <Link to="/service/ai" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
@@ -180,7 +214,6 @@ const Home = () => {
             <div className="card__content--container flow">
               <h2 className="card__title">Cloud Solutions</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
               <Link to="/service/cloud" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
@@ -192,7 +225,6 @@ const Home = () => {
             <div className="card__content--container flow">
               <h2 className="card__title">Cyber Security</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
               <Link to="/service/cyber" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
@@ -204,7 +236,6 @@ const Home = () => {
             <div className="card__content--container flow">
               <h2 className="card__title">Software Development</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
               <Link to="/service/software" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
@@ -216,7 +247,6 @@ const Home = () => {
             <div className="card__content--container flow">
               <h2 className="card__title">Data Analytics</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
               <Link to="/service/analytics" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
@@ -228,7 +258,6 @@ const Home = () => {
             <div className="card__content--container flow">
               <h2 className="card__title">Database Security</h2>
               <p className="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in labore laudantium deserunt fugiat numquam.
               </p>
               <Link to="/service/dbSecurity" className="card__button">Details <i class="uil uil-arrow-up-right"></i></Link>
             </div>
@@ -241,15 +270,13 @@ const Home = () => {
 
         {/* home why choose us */}
         <section className='Home__choose'>
-       
- 
         <div class='Home__whyChooseBlock'>
          
   <div class="home__chooseBlock1-content">
     <div class="chooseblock1-data1">
       <img src={bulbImage} alt="bulb" class='chooseIcon' />
       <h2>Business Strategy</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisit. eum.</p>
+      <p>Creating software that streamlines operations and drives business growth.</p>
     </div>
     <div class="chooseblock1-data2">
       <img src={clock} alt="bulb" class='chooseIcon' />
@@ -270,13 +297,13 @@ const Home = () => {
     <div class="chooseblock3-data2">
       <div class="chooseblock3-subpart1">
         <img src={calendarImage} alt="bulb" class='chooseIcon' />
-        <h2>Business Strategy</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a corrupti eum.</p>
+        <h2>Delivery</h2>
+        <p>The effective purchasing and fast production departments enable us to deliver in time.</p>
       </div>
       <div class="chooseblock3-subpart2">
         <img src={settingImage} alt="bulb" class='chooseIcon' />
-        <h2>Business Strategy</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a corrupti eum.</p>
+        <h2>Design Service</h2>
+        <p>Our skilled team excels in product design and development, improving products annually based on after-sales feedback</p>
       </div>
     </div>
   </div>
@@ -301,7 +328,7 @@ const Home = () => {
         <div className="dot upperCentre"></div>
         <div className="dot upperRight"></div>
       </div>
-      <button className="hire-button">Hire Top Developers</button>
+      <button id='button3' onClick={handleButtonClick} className="hire-button">Hire Top Developers</button>
       <div className="dots-container right-dots">
         <div className="dot bottomLeft"></div>
         <div className="dot bottomCentre"></div>
