@@ -1,0 +1,166 @@
+/* Pop-up overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+  }
+  
+  .overlay.active {
+    display: flex; /* Show the overlay when active */
+  }
+  
+  /* Pop-up content */
+  .popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    
+    max-width: 900px;
+  }
+  .consult__content{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .connectImage{
+    width: 450px;
+    height: 500px;
+    border-radius: 20px;
+    margin-top: 2;
+  }
+  .conult__form{
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+  
+  }
+  .uil-multiply{
+    display: flex;
+    flex-direction:row-reverse;
+  }
+  .consult__input-data{
+    border: none;
+    width: max-content;
+    height: 50px;
+    font-family: var(--font-title);
+    font-size: 14px;
+    width: 300px;
+    background-color: rgb(246, 238, 238);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  .BriefField{
+    height: 80px;
+    align-items: top;
+  }
+  .consultbutton{
+    width: max-content;
+    padding: 15px 40px 15px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color) ;
+    color: white;
+  }
+  .consultbutton:hover{
+    background-color: black;
+    color: white;
+  }
+  .goCareersPage{
+    color: var(--primary-color);
+  }
+  .goCareersPage:hover{
+    text-decoration: underline;
+  }
+  
+  
+  
+  
+  @media screen and (max-width: 992px) {
+    .popup {
+      max-width: 80%;
+      margin-top: 5rem;
+    }
+  
+    .consult__content {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .connectImage {
+      margin-top: 2rem;
+      width: 95%;
+      height: 500px;
+    }
+  
+    .conult__form {
+      width: 80%;
+    }
+  
+    .consult__input-data {
+      width: 100%;
+      height: 50px;
+    }
+  
+    .consultbutton {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+    .popup {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .consult__input-data {
+      font-size: 13px;
+    }
+  
+    .consultbutton {
+      padding: 10px 30px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .popup {
+      max-width: 95%;
+    }
+  .connectImage{
+    display: none;
+  }
+    .consult__input-data {
+      font-size: 12px;
+      padding: 0.8rem;
+    }
+  
+    .consultbutton {
+      padding: 10px 20px;
+    }
+  }
+  
+  /* For small devices */
+  @media screen and (max-width: 350px) {
+    .consult__input-data {
+      font-size: 11px;
+      padding: 0.5rem;
+    }
+  
+    .consultbutton {
+      padding: 8px 15px;
+    }
+  }
+  
+  
+  

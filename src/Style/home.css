@@ -703,7 +703,19 @@ margin-right: 3rem;
   .feature-item {
     width: 100%;
   }
+  .home__subtitle{
+    font-size: 2rem;
+  }
+
+  .home__content {
+    grid-template-columns: 1fr
+  }
+  .home__img {
+    order: -1; /* Move image to the top */
+    margin-bottom: 1rem; /* Add space below the image */
+  }
   .home__grom-content{
+  
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
@@ -711,6 +723,8 @@ margin-right: 3rem;
     gap: 1rem;
     margin-top: 2rem;
     }
+   
+  
     .home__hire-content {
       flex-direction: row; /* Adjust flex direction for smaller screens */
     }

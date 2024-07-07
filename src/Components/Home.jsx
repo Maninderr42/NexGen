@@ -71,7 +71,7 @@ const Home = () => {
         <div className='home__content'>
           <div className="home__content-data">
             <h3 className='home__title'>ARE YOU READY TO</h3>
-            <h1 className='home__subtitle display-1 d-none d-lg-block'>REVOLUTIONIZE YOUR BUSINESS</h1>
+            <h1 className='home__subtitle display-1 d-lg'>REVOLUTIONIZE YOUR BUSINESS</h1>
             <hr className='home__line'/>
             <p className='home__content-title lead'>We specialize in Digital Transformation, aiming to elevate and expand your online presence. 
             Our mission is to ensure you never miss an opportunity to connect with your customers and grow your business.</p>

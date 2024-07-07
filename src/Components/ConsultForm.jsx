@@ -1,9 +1,10 @@
-// ConsultForm.jsx
-import React, { useRef, useEffect ,useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import connectImage from '../assets/pikaso_texttoimage_35mm-film-photography-A-young-woman-with-long-wavy (1).jpeg';
-import '../Style/header.css'; // Create a new CSS file for the ConsultForm styles
+import '../Style/consult.css'; // Create a new CSS file for the ConsultForm styles
 import emailjs from 'emailjs-com'; // Correct import for emailjs
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ConsultForm = ({ isPopupVisible, togglePopup }) => {
   const popupRef = useRef(null);
@@ -15,47 +16,56 @@ const ConsultForm = ({ isPopupVisible, togglePopup }) => {
     phoneNo: '',
     introduction: ''
   });
-  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({ ...prevState, [name]: value }));
-    if (error) {
-      setError('');
-    }
   };
 
   const validateForm = () => {
-    if (!formData.name) return 'Name is required';
-    if (!formData.email) return 'Email is required';
-    if (!formData.phoneNo) return 'Phone number is required';
-    if (!formData.introduction) return 'Message is required';
-    return '';
+    if (!formData.name) {
+      toast.error('Name is required');
+      return false;
+    }
+    if (!formData.email) {
+      toast.error('Email is required');
+      return false;
+    }
+    if (!formData.phoneNo) {
+      toast.error('Phone number is required');
+      return false;
+    }
+    if (!formData.introduction) {
+      toast.error('Message is required');
+      return false;
+    }
+    return true;
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const validationError = validateForm();
-    if (validationError) {
-      setError(validationError);
+    if (!validateForm()) {
       return;
     }
-    emailjs.sendForm('service_8rtdkrf', 'template_ef0dflh', form.current, 'Dl9G7b8lQksPXRiv7')
-    .then(() => {
-      setFormData({
-        name: '',
-        email: '',
-        phoneNo: '',
-        introduction: ''
+    setLoading(true);
+    emailjs.sendForm('service_tmou7va', 'template_d9swgm3', form.current, 'zKdz7KFDhOH96hoPV')
+      .then(() => {
+        toast.success('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          phoneNo: '',
+          introduction: ''
+        });
+      })
+      .catch((error) => {
+        toast.error('Failed to send the message. Please try again later.');
+        console.error('EmailJS Error:', error);
+      })
+      .finally(() => {
+        setLoading(false);
       });
-      setError('');
-      alert('Your message has been sent successfully!');
-      
-    })
-    .catch((error) => {
-      alert('Failed to send the message. Please try again later.');
-      console.error('EmailJS Error:', error);
-    });
   };
 
   useEffect(() => {
@@ -67,6 +77,7 @@ const ConsultForm = ({ isPopupVisible, togglePopup }) => {
 
     if (isPopupVisible) {
       document.addEventListener('mousedown', handleClickOutside);
+      
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
     }
@@ -94,7 +105,6 @@ const ConsultForm = ({ isPopupVisible, togglePopup }) => {
                   value={formData.name}
                   onChange={handleChange}
                   className='consult__input-data'
-                  required
                 />
                 <input
                   type="text"
@@ -103,7 +113,6 @@ const ConsultForm = ({ isPopupVisible, togglePopup }) => {
                   value={formData.phoneNo}
                   onChange={handleChange}
                   className='consult__input-data'
-                  required
                 />
                 <input 
                   type="email"
@@ -112,7 +121,6 @@ const ConsultForm = ({ isPopupVisible, togglePopup }) => {
                   value={formData.email}
                   onChange={handleChange}
                   className='consult__input-data'
-                  required
                 />
                 <textarea 
                   name="introduction"
@@ -120,15 +128,16 @@ const ConsultForm = ({ isPopupVisible, togglePopup }) => {
                   value={formData.introduction}
                   onChange={handleChange}
                   className='BriefField consult__input-data'
-                  required
                 ></textarea> 
-                {error && <p className="error">{error}</p>}
-                <button className='button button--flex consultbutton' type="submit">Submit</button>
+                <button className='button button--flex consultbutton' type="submit" disabled={loading}>
+                  {loading ? 'Sending...' : 'Submit'}
+                </button>
               </form>
             </div>
           </div>
         </div>
       )}
+      <ToastContainer />
     </>
   );
 };

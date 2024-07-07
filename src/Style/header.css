@@ -5,7 +5,8 @@
   position: sticky;
   z-index: var(--z-fixed);
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
 
 .nav {
   height: 4.5rem;
@@ -28,18 +29,31 @@
 .nav__list {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex: 1;
 }
 
 .nav__link {
-  align-items: center;
   display: flex;
   flex-direction: column;
   font-size: 1.3rem;
-  margin-top: 10px;
   color: var(--title-color);
   font-weight: var(--font-medium);
   transition: .3s;
+}
+
+.nav__link.nav__consult {
+  margin-top: 7px;
+  background-color: var(--primary-color);
+  color: white;
+  margin-left: 5rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.nav__link.nav__consult:hover {
+  color: white;
+  background-color: var(--secondary-color);
 }
 
 .nav__icon,
@@ -74,257 +88,110 @@
 }
 
 @media screen and (max-width: 992px) {
-  .nav__profile{
-display: none;
+  .nav__logo {
+    margin-left: 0rem;
   }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav__link.nav__consult {
+    margin-left: 3rem;
+  }
+
+
+  /* .nav__profile {
+    display: none;
+  } */
 }
 
 @media screen and (max-width: 768px) {
   .header {
-      top: 0;
-      bottom: initial;
+    top: 0;
+    bottom: initial;
+  }
+  .nav__link.nav__consult {
+    margin-left: 0;
   }
 
   .nav {
-      height: var(--header-height);
+    height: var(--header-height);
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .nav__menu {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background-color: var(--body-color);
-      padding: 2rem 1.5rem;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-      transition: .3s;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    transition: .3s;
   }
 
   .show-menu {
-      left: 0;
+    left: 0;
   }
 
   .nav__list {
-      display: grid;
-      grid-template-columns: 1fr;
-      row-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 
   .nav__icon {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .nav__close {
-      position: absolute;
-      right: 1.3rem;
-      top: 1.5rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--title-color);
+    position: absolute;
+    right: 1.3rem;
+    top: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--title-color);
   }
 
   .nav__close:hover {
-      color: var(--title-color-dark);
+    color: var(--title-color-dark);
   }
 
   .nav__toggle {
-      font-size: 1.1rem;
-      cursor: pointer;
+    font-size: 1.1rem;
+    cursor: pointer;
   }
 
   .nav__icon,
   .nav__toggle,
   .nav__close {
-      display: block;
+    display: block;
   }
-  .nav__profile{
+
+  .nav__profile {
     display: flex;
-      }
+  }
 }
 
 @media screen and (max-width: 350px) {
   .nav__menu {
-      padding: 2rem 0.25rem;
+    padding: 2rem 0.25rem;
   }
 
   .nav__list {
-      column-gap: 0;
+    column-gap: 0;
   }
 }
 
 /* Styles for the Consult Now button */
 
 
-.wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.link_wrapper {
-  position: relative;
-  width: 220px; /* Fixed width */
-
-}
-
-a.btn {
-  display: block;
-  width: 240px;
-  height: 50px;
-  line-height: 35px;
-  font-weight: bold;
-  text-decoration: none;
-  background: var(--primary-color) ;
-  text-align: center;
-  justify-content: center;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all .35s;
-}
-
-.icon {
-  width: 50px;
-  height: 50px;
-  border: 3px solid transparent;
-  position: absolute;
-  transform: rotate(45deg);
-  right: 0;
-  top: 0;
-  left: 195px;
-  z-index: -1;
-  transition: all .35s;
-}
-
-.icon svg {
-  width: 30px;
-  position: absolute;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
-  transform: rotate(-45deg);
-  fill: #378ae9;
-  transition: all .35s;
-}
-
-a.btn:hover {
-  width: 200px;
-  border: 3px solid var(--primary-color) ;
-  background: transparent;
-  color: #378ae9;
-}
-
-a.btn:hover + .icon {
-  border: 3px solid #378ae9;
-  right: -25%;
-}
-
-
-
-/* Pop-up overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  display: none; /* Hidden by default */
-}
-
-.overlay.active {
-  display: flex; /* Show the overlay when active */
-}
-
-/* Pop-up content */
-.popup {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  
-  max-width: 900px;
-}
-.consult__content{
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
-.connectImage{
-  width: 450px;
-  height: 500px;
-  border-radius: 20px;
-  margin-top: 2;
-}
-.conult__form{
-  display: flex;
-  width: max-content;
-  flex-direction: column;
-
-}
-.uil-multiply{
-  display: flex;
-  flex-direction:row-reverse;
-}
-.consult__input-data{
-  border: none;
-  width: max-content;
-  height: 50px;
-  font-family: var(--font-title);
-  font-size: 14px;
-  width: 300px;
-  background-color: rgb(246, 238, 238);
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 5px;
-}
-.BriefField{
-  height: 80px;
-  align-items: top;
-}
-.consultbutton{
-  width: max-content;
-  padding: 15px 40px 15px 40px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--primary-color) ;
-  color: white;
-}
-.consultbutton:hover{
-  background-color: black;
-  color: white;
-}
-.goCareersPage{
-  color: var(--primary-color);
-}
-.goCareersPage:hover{
-  text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 1200px) {
   .nav__link {
-    
     font-size: 1rem;
-    
   }
 }

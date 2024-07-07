@@ -126,6 +126,19 @@ margin-top: 4rem;
     left: 15px;
 
   }
+  /* contact.css */
+
+  .contactUs-input-data.error {
+    border: 1px solid red;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: -10px;
+  }
 /* Responsive CSS */
 @media screen and (max-width: 992px) {
     .contact__boxes {
