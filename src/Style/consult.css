@@ -23,7 +23,7 @@
     padding: 20px;
     border-radius: 8px;
     
-    max-width: 900px;
+    max-width: 800px;
   }
   .consult__content{
     display: flex;
@@ -31,8 +31,8 @@
     gap: 2rem;
   }
   .connectImage{
-    width: 450px;
-    height: 500px;
+    width: 400px;
+    height: 450px;
     border-radius: 20px;
     margin-top: 2;
   }
