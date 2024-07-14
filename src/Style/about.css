@@ -256,6 +256,9 @@ left: -20px;
 }
 
 @media screen and (max-width: 768px) {
+  .aboutPage__content-process{
+    margin-top: 0;
+  }
   .process__title h2 {
       font-size: 3rem;
       text-align: center;
@@ -266,6 +269,7 @@ left: -20px;
   }
   .aboutPage__process-data {
       grid-template-columns: 1fr;
+      gap: 2rem;
   }
   .process__diagram{
     position: relative;
@@ -294,6 +298,29 @@ left: -20px;
   }
   .process__diagram{
     margin: 0 3rem;
+  }
+}
+@media screen  and (max-width: 470px){
+  .AnalysisButton{
+    left: 140px;
+  }
+  .righttoleft{
+    position: relative;
+    left: 150px;
+  }
+  .proofButton{
+    left: 15px;
+
+  }
+  .ExectionButton{
+    left: 160px;
+  }
+
+  .Exectionrighttoleft{
+    left: 180px;
+  }
+  .LaunchButton{
+    left: 30px;
   }
 }
 

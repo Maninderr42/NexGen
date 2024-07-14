@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Style/service.css';
 import upArrowImage from '../assets/upArrow.svg';
 import linesImage from '../assets/linesImage.svg'
 import upperDots from '../assets/upperDots.svg'
 import meetingsFrom from '../assets/-people-working-together-office_52137-37754.avif'
+import ConsultForm from './ConsultForm';
+
 
 const Service = ({ service }) => {
   const { title, description, content } = service;
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupVisible(!isPopupVisible);
+  };
+
+ 
 
   return (
     <div className="service">
@@ -63,12 +72,15 @@ const Service = ({ service }) => {
           <div className="service__contact-data">
             <h1>Ready to Elevate Your Business?</h1>
             <p>Get in touch with our experts today and discover how we can help you achieve your cloud computing goals</p>
-            <button className='getStarted button button--flex'> Get Started</button>
-            <button className='OurService button button--flex'>Our Service</button>
+            <button onClick={togglePopup} className='getStarted button button--flex'> Request a call back</button>
+
           </div>
           <img src={upperDots} alt="" className='upperDots' />
         </div>
+        <ConsultForm isPopupVisible={isPopupVisible} togglePopup={togglePopup} />
+
       </section>
+      
     </div>
   );
 }

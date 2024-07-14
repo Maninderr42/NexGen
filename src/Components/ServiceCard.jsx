@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef ,useState } from 'react';
 import '../Style/service.css';
 import AOS from 'aos';
 import '../Style/home.css';
@@ -14,9 +14,19 @@ import serviceImage3 from '../assets/cyber-data-8270.avif';
 import serviceImage4 from '../assets/software-developers52993.avif';
 import serviceImage5 from '../assets/business-data-analys11790.avif';
 import serviceImage6 from '../assets/digital594.avif';
+import ConsultForm from './ConsultForm';
+
 
 const ServiceCard = () => {
   const serviceRef = useRef(null);
+
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupVisible(!isPopupVisible);
+  };
+
+ 
 
   useEffect(() => {
     AOS.init({
@@ -148,16 +158,17 @@ const ServiceCard = () => {
         </div>
       </section>
 
-      <div className="service__contact-block container serviceCardContact" data-aos="fade-up" data-aos-delay="800">
+      <div className="service__contact-block container serviceCardContact" data-aos="fade-up" data-aos-delay="700">
         <img src={linesImage} alt="" className='linesImage' />
         <div className="service__contact-data">
           <h1>Ready to Elevate Your Business?</h1>
           <p>Get in touch with our experts today and discover how we can help you achieve your cloud computing goals</p>
-          <button className='getStarted button button--flex'>Get Started</button>
-          <button className='OurService button button--flex'>Our Service</button>
+            <button onClick={togglePopup}  className='getStarted button button--flex'> Request a call back</button>
         </div>
         <img src={upperDots} alt="" className='upperDots' />
       </div>
+      <ConsultForm isPopupVisible={isPopupVisible} togglePopup={togglePopup} />
+
     </div>
   )
 }

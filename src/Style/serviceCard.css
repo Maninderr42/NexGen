@@ -26,3 +26,15 @@
     text-align: left;
     font-size: 28px;
 }
+@media screen and (max-width: 576px) {
+    .ServiceButton{
+        margin-left: 0.50rem;
+    }
+    .serviceCard__title{
+        margin-left: 1rem;
+    }
+    .service-Imagetext h4{
+        text-align: center;
+
+    }
+}

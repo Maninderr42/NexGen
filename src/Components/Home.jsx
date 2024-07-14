@@ -18,7 +18,6 @@ import serviceImage3 from '../assets/cyber-data-8270.avif';
 import serviceImage4 from '../assets/software-developers52993.avif';
 import serviceImage5 from '../assets/business-data-analys11790.avif';
 import serviceImage6 from '../assets/digital594.avif';
-import shapeImage from '../assets/Shape 1.svg';
 import shapeImage2 from '../assets/Shape 2.svg';
 import whyhooseImage from '../assets/girl-makin-assumption-solving-mistery-mind-holding-finger-lip-looking-upper-left-corner-de_926199-3638869.avif';
 import bulbImage from '../assets/Bulb.png';
@@ -83,18 +82,18 @@ const Home = () => {
 
         {/* About Section */}
         <section id="about-section" className="home__about" >
-          <h1 className='home__about-title' data-aos="fade-up" data-aos-delay="600" >About us </h1>
+          <h1 className='home__about-title' data-aos="fade-up" data-aos-delay="400" >About us </h1>
           <div className='home__content-about'>
             <div className='home__content-aboutImage'>
               <img src={aboutImage} alt="about" className='aboutImage' />
             </div>
             <div className="home__content_about-Data">
               <button className='button button--flex home__aboutbutton'>About NavGen</button>
-              <h2 className='about__title' data-aos="fade-up" data-aos-delay="700">Exclusive Technology to Provide IT Solutions</h2>
-              <p className='about__subtitle' data-aos="fade-up" data-aos-delay="800">We provide expert advice on technology strategy, digital transformation, and IT infrastructure planning, empowering our clients to achieve their business objectives efficiently and effectively.</p>
+              <h2 className='about__title' data-aos="fade-up" data-aos-delay="600">Exclusive Technology to Provide IT Solutions</h2>
+              <p className='about__subtitle' data-aos="fade-up" data-aos-delay="650">We provide expert advice on technology strategy, digital transformation, and IT infrastructure planning, empowering our clients to achieve their business objectives efficiently and effectively.</p>
               <div className="home-dataImg">
-                <img src={aboutImage2} alt="about" className='aboutdataImage' data-aos="flip-up" data-aos-delay="900" />
-                <img src={aboutImage3} alt="about" className='aboutdataImage' data-aos="flip-up" data-aos-delay="950" />
+                <img src={aboutImage2} alt="about" className='aboutdataImage' data-aos="flip-up" data-aos-delay="700" />
+                <img src={aboutImage3} alt="about" className='aboutdataImage' data-aos="flip-up" data-aos-delay="780" />
               </div>
             </div>
           </div>
@@ -251,10 +250,10 @@ const Home = () => {
                 <p>If our customer has any problem and any query we are always happy to help then.</p>
               </div>
             </div>
-            <div className="home__chooseBlock2-content" data-aos="fade-up" data-aos-delay="100">
+            <div className="home__chooseBlock2-content" data-aos="fade-up" data-aos-delay="50">
               <img src={whyhooseImage} alt="why choose us girl confused" className='home__choosegirlImage' />
             </div>
-            <div className="home__chooseBlock3-content" data-aos="fade-up" data-aos-delay="150">
+            <div className="home__chooseBlock3-content" data-aos="fade-up" data-aos-delay="100">
               <div className="chooseblock3-data1">
                 <h1> <span className='fontWeight'>Why</span> Choose Us? </h1>
                 <h3>Everyday we work hard to make life of our clients better and happier</h3>

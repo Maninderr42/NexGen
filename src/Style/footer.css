@@ -73,9 +73,7 @@ padding: 5rem;
 .contactList{
     margin-bottom: 1rem;
 }
-.Footer__subscribe{
-    /* margin-left: 5rem; */
-}
+
 .Footer__subscribe h3{
     font-weight: 400;
     font-size: 20px;
@@ -99,20 +97,28 @@ padding: 5rem;
 @media screen and (max-width: 992px) {
  
 }
-
-/* For medium devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px){
     .Footer__content{
         display: flex;
         flex-direction: column;
-        
+        padding: 3rem;   
         }
 }
 
+/* For medium devices */
+
+
 @media screen and (max-width: 576px) {
+    .Footer__content{
+        gap: 2rem;    
+        padding: 1rem;
+
+        
+        }
 }
 
 /* For small devices */
 @media screen and (max-width: 350px) {
   
+
 }

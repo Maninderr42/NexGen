@@ -164,12 +164,15 @@
  .linesImage{
   position: relative;
   left: -10px;
-  top: -110px;
+  top: -100px;
 }
  .getStarted {
     border-radius: 40px;
+    background-color: black;
+    color: white;
     margin-right: 1rem;
     margin-bottom: 4rem;
+    margin-top: 1rem;
  }
  .OurService{
     border-radius: 40px;
@@ -221,8 +224,7 @@ font-size: 25px;
   .service_content-data2, .service__list2 {
     width: 90%;
   }
-  .service__contact-block{
-  }
+  
   
   .service__contact-data h1 {
     font-size: 30px;
@@ -287,7 +289,7 @@ font-size: 25px;
 /* For small devices */
 @media screen and (max-width: 576px) {
   .service__content-title {
-    height: 300px;
+    height: 400px;
   }
 
   .service-title h1 {
@@ -311,21 +313,43 @@ font-size: 25px;
   .service-Imagetext h4, .service-Imagetext p {
     margin-left: 0.5rem;
   }
+  .service__contact-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+  }
 
   .service__contact-data h1 {
     font-size:20px;
     margin-top: 2rem;
-  }.service__contact-data p {
+  }
+  .service__contact-data p {
     font-size:13px;
     width: 250px;
     margin-top: 1rem;
+    margin-left: 4rem;
   }
   .upperDots{
-   display: none;
-
+    margin-left: -3rem;
+  }
+ 
+}
+@media screen and (max-width: 380px) {
+  .service__contact-data h1 {
+    font-size:18px;
+    margin-top: 2rem;
+    margin-left: -1rem;
+  }
+  .service__contact-data p {
+    font-size:11px;
+    margin-left: 3rem;
+  }
+  .upperDots{
+    margin-left: -5rem;
   }
 }
-
 /* For extra small devices */
 @media screen and (max-width: 350px) {
   .service__content-title {

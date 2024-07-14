@@ -1,7 +1,6 @@
-import React, { useEffect , useRef} from 'react';
+import React, { useEffect , useRef, useState} from 'react';
 import AOS from 'aos';
-import { useLocation } from 'react-router-dom';
-
+import { useLocation} from 'react-router-dom';
 import 'aos/dist/aos.css'; // Import AOS styles
 import '../Style/about.css';
 import '../Style/home.css'
@@ -15,6 +14,8 @@ import anaylsisIcon from '../assets/analysisicon.svg'
 import proofIcon from '../assets/analysisicon.svg'
 import exceutionIcon from '../assets/executiveicon.svg'
 import Launchicon from '../assets/launchicon.svg'
+import ConsultForm from './ConsultForm';
+
 
 
 
@@ -22,6 +23,7 @@ import Launchicon from '../assets/launchicon.svg'
 const About = () => {
   const location = useLocation();
   const aboutRef = useRef(null);
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -30,6 +32,12 @@ const About = () => {
     });
     AOS.refresh(); // Refresh AOS to reinitialize animations on route change
   }, [location]);
+
+  const togglePopup = () => {
+    setIsPopupVisible(!isPopupVisible);
+  };
+
+ 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -105,11 +113,13 @@ This initial dialogue lays the foundation for a tailored strategy. Following thi
           <div className="service__contact-data">
             <h1>Ready to Elevate Your Business?</h1>
             <p>Get in touch with our experts today and discover how we can help you achieve your cloud computing goals</p>
-            <button className='getStarted button button--flex'> Get Started</button>
-            <button className='OurService button button--flex'>Our Service</button>
+            <button onClick={togglePopup} className='getStarted button button--flex'> Request a call back</button>
+
           </div>
           <img src={upperDots} alt="" className='upperDots' />
         </div>
+        <ConsultForm isPopupVisible={isPopupVisible} togglePopup={togglePopup} />
+
     </section>
   )
 }

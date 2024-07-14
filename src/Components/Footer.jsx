@@ -70,7 +70,7 @@ const Footer = () => {
 
                     </li>
                     <li className='footer__item contactList'>   phone:+91-8591066565</li>
-                    <li className='footer__item contactList'> email:nexgeninnovation.team@gmail.com</li>
+                    <li className='footer__item contactList '> email:nexgeninnovation.team@gmail.com</li>
             </ul>
 
             </div>
