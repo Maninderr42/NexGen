@@ -55,7 +55,9 @@ const Careers = () => {
           do their best work. If you're ready to grow your career and help
           millions of organizations grow better, you've come to the right place.
         </p>
-        <button className="careers_button button button--flex">Contact us</button>
+        <button className="careers_button button button--flex ">
+        <a href="mailto:nexgeninnovation.team@gmail.com" target="_blank" className='box__company-info'>Contact Us</a>
+        </button>
       </div>
 
       <img src={img1} className="careers_img" alt="Careers" />
