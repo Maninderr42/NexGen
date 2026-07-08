@@ -25,7 +25,7 @@ const Footer = () => {
             <a href="/" className="footer__social-icon" target='_blank'>
             <i className="uil uil-github-alt"></i>
             </a>
-            <a href="/" className="footer__social-icon" target='_blank'>
+            <a href="https://www.linkedin.com/company/nexgen-innovation-pvt-ltd/" className="footer__social-icon" target='_blank' rel="noreferrer">
             <i className="uil uil-linkedin"></i>
             </a>
                 </div>
@@ -65,7 +65,7 @@ const Footer = () => {
             <h3>Contact Us</h3>
             <ul className='footer__list '>
             <li className='footer__item contactList'>
-                Address: Ludhiana, Punjab ,India, 
+                Address: Sahibzada Ajit Singh Nagar, Punjab ,India, 
 
 
                     </li>

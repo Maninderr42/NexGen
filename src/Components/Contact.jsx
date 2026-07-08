@@ -96,7 +96,7 @@ const Contact = () => {
               <i className="uil uil-map-marker-alt box__icon"></i>
               <h3>Office</h3>
               <h4>Come say hello at our office HQ.</h4>
-              <p className='box__company-info'>Address: Ludhiana, Punjab ,India</p>
+              <p className='box__company-info'>Address: Sahibzada Ajit Singh Nagar, Punjab ,India</p>
             </div>
             <div className="box-data contact__box-email" data-aos="fade-up" data-aos-delay="200">
               <i className="uil uil-calling box__icon"></i>
